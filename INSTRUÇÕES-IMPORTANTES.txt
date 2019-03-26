@@ -1,6 +1,3 @@
-# Desafio
-Desafio Gympass 2019
-
 Como jogar?
 Primeiro Passo -> Faça o Donwload "CorridaGympass"
 Segundo Passo -> Clique no programa index.html
@@ -27,8 +24,4 @@ O botão RESET serve para que a corrida dê início (Jogue Novamente).
 
 -Campeões
    Nesse módulo o jogador visualiza qual piloto ganhou as medalhas de ouro, prata e bronze.
-
-
-Qual o recurso que foi utilizado para o desenvolvimento?
-HTML, CSS, JavaScript, Jquery e Bootstrap
-
+   
