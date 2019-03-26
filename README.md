@@ -1,34 +1,36 @@
-# Desafio
-Desafio Gympass 2019
+# Desafio Gympass 2019
 
-Como jogar?
-Primeiro Passo -> FaÁa o Donwload "CorridaGympass"
-Segundo Passo -> Clique no programa index.html
-Terceiro Passo -> Clique na aba "CORRIDA" e inicia a corrida clicando no bot„o "PUSH" atÈ todos os pilotos alcanÁarem a linha de chegada 
+<b>Corrida Maluca </b>
+
+<b>Como jogar?</b> <br />
+Primeiro Passo -> Fa√ßa o Donwload "CorridaGympass" <br />
+Segundo Passo -> Clique no programa index.html <br />
+Terceiro Passo -> Clique na aba "CORRIDA" e inicia a corrida clicando no bot√£o "PUSH" at√© todos os pilotos alcan√ßarem a linha de chegada  <br /><br />
 
 
-Como funciona?
-Assim, que o jogador entra no jogo, ele se depara com a tela inicial e mais 5 abas:
--Cadastro
-   Nesse mÛdulo, o jogador pode cadastrar os pilotos que participar„o da corrida, ou trocar os nomes dos pilotos que o prÛprio jogo j· traz default.
+<b>Como funciona?</b> <br />
+Assim, que o jogador entra no jogo, ele se depara com a tela inicial e mais 5 abas: <br />
+
+&bull; Cadastro <br />
+   Nesse m√≥dulo, o jogador pode cadastrar os pilotos que participar√£o da corrida, ou trocar os nomes dos pilotos que o pr√≥prio jogo j√° traz default. <br />
    
--Corrida
-   Nesse mÛdulo, È onde o jogador pode, de fato, interagir.
-Aqui o jogador d· a largada e interage com o sistema atÈ que todos os pilotos alcancem a linha de chegada, apertando o bot„o PUSH.
-Existe uma numeraÁ„o na parte superior da pista, de 1 a 4, que refere-se ao n˙mero de voltas dada por cada piloto.
-Por exemplo, se o piloto que est· no carrinho verde est· na faixa do n˙mero 3, significa que ele j· percorreu 3 voltas no circuito.
-O bot„o RESET serve para que a corrida dÍ inÌcio (Jogue Novamente).
+&bull; Corrida <br />
+   Nesse m√≥dulo, √© onde o jogador pode, de fato, interagir. <br />
+Aqui o jogador d√° a largada e interage com o sistema at√© que todos os pilotos alcancem a linha de chegada, apertando o bot√£o PUSH. <br />
+Existe uma numera√ß√£o na parte superior da pista, de 1 a 4, que refere-se ao n√∫mero de voltas dada por cada piloto. <br />
+Por exemplo, se o piloto que est√° no carrinho verde est√° na faixa do n√∫mero 3, significa que ele j√° percorreu 3 voltas no circuito. <br />
+O bot√£o RESET serve para que a corrida d√™ in√≠cio (Jogue Novamente).<br />
 
--HistÛrico Corrida
-   Nesse mÛdulo È possÌvel o jogador identificar dados como hora de fim da corrida para cada piloto, o tempo gasto durante o percurso, a velocidade da mÈdia de cada piloto.
+&bull; Hist√≥rico Corrida <br />
+   Nesse m√≥dulo √© poss√≠vel o jogador identificar dados como hora de fim da corrida para cada piloto, o tempo gasto durante o percurso, a velocidade da m√©dia de cada piloto. <br />
 
--ClassificaÁ„o Geral
-   Nesse mÛdulo est· o ranking da corrida. … possÌvel identificar a classificaÁ„o de cada piloto e tambÈm informaÁıes mais detalhadas da partida, como a melhor volta de cada piloto  e a velocidade mÈdia de cada piloto durante toda a corrida.
+&bull; Classifica√ß√£o Geral <br />
+   Nesse m√≥dulo est√° o ranking da corrida. √â poss√≠vel identificar a classifica√ß√£o de cada piloto e tamb√©m informa√ß√µes mais detalhadas da partida, como a melhor volta de cada piloto  e a velocidade m√©dia de cada piloto durante toda a corrida.
 
--Campeıes
-   Nesse mÛdulo o jogador visualiza qual piloto ganhou as medalhas de ouro, prata e bronze.
+&bull; Campe√µes <br />
+   Nesse m√≥dulo o jogador visualiza qual piloto ganhou as medalhas de ouro, prata e bronze. <br /><br />
 
 
-Qual o recurso que foi utilizado para o desenvolvimento?
+<b>Qual o recurso que foi utilizado para o desenvolvimento?</b> <br />
 HTML, CSS, JavaScript, Jquery e Bootstrap
 
