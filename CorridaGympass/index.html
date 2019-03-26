@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+<head>
+   
+   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+   <title>Corrida Maluca Gympass</title>
+   
+   <meta name="author" content="Alisson Dill">
+   <meta name="viewport" content="width=device-width, initial-scale=1"> 
+   
+   <link rel="icon" type="image/png" href="https://www.gympass.com/gp/favicon-32x32.png?v=3" sizes="32x32">
+   <link rel="icon" type="image/png" href="https://www.gympass.com/gp/favicon-16x16.png?v=3" sizes="16x16">
+   
+   <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+   <link rel="stylesheet" href="css/carros.css">
+   
+   <script type="text/javascript" src="js/scripts.js"></script>
+   <script src="js/jquery.min.js"></script>
+   
+</head>
+
+<body>
+   
+   <nav class="navbar navbar-inverse navbar-global navbar-fixed-top">
+      <div class="container-fluid">
+         <div class="navbar-header">
+            <a class="navbar-brand" href="#"> <b> Corrida Maluca Gympass </b> </a>
+         </div>
+      </div>
+   </nav>
+    
+   <nav class="navbar-primary">
+      <ul class="navbar-primary-menu">
+         <li>
+            <a href="javascript:Mudarestado('cadastrar-piloto');"><span> <img src="images/people-2x.png" > </span><span class="nav-label">Cadastro</span></a>
+            <a href="javascript:Mudarestado('inicio-corrida');"><span> <img src="images/flag-2x.png" > </span><span class="nav-label">Corrida</span></a>
+            <a href="javascript:Mudarestado('historico-corrida');"><span> <img src="images/signal-2x.png" > </span><span class="nav-label">Histórico Corrida</span></a>
+            <a href="javascript:Mudarestado('classificacao-corrida');"><span> <img src="images/badge-2x.png" > </span><span class="nav-label"> Classificação Geral </span></a>
+            <a href="javascript:Mudarestado('titulos-pilotos');"><span> <img src="images/star-2x.png" > </span><span class="nav-label"> Campeões </span></a>
+         </li>
+      </ul>
+   </nav>
+
+
+   <div class="main-content">
+      <div id="home-introducao">
+         <h1> Bem vindo a Corrida Maluca Gympass </h1>
+         <p>Para jogar é bem simples. Basta você cadastrar 5 pilotos e apostar com os amigos quem vai chegar primeiro.</p>
+      </div>
+      
+      <div id="cadastrar-piloto" style="display: none;">
+         <div class="form-group row">
+            <b style="margin-left: 15px;">Para iniciar a corrida tem que está cadastrado os 5 pilotos. O sistema deu algumas sugestões de pilotos famosos, vou pode alterar os nomes! <b>
+         </div>   
+         <form style="width: 70%;">
+            <div class="form-group row">
+               <div class="col">
+                  <label for="nomePiloto1" >Piloto 1</label>
+                  <span> <img src="images/C1.png" > </span>
+                  <input type="text" id="nomePiloto1" class="form-control" placeholder="Nome" value="F.MASSA">
+               </div>
+               <div class="col">
+                  <label for="numeroPiloto1" >Código Piloto 1</label>
+                  <input type="text" id="numeroPiloto1" class="form-control" placeholder="Numero" size="80" value="038">
+               </div>
+            </div>
+            <div class="form-group row">
+               <div class="col">
+                  <label for="nomePiloto2" >Piloto 2</label>
+                  <span> <img src="images/C2.png" > </span>
+                  <input type="text" id="nomePiloto2" class="form-control" placeholder="Nome" value="R.BARRICHELLO">
+               </div>
+               <div class="col">
+                  <label for="numeroPiloto2" >Código Piloto 2</label>
+                  <input type="text" id="numeroPiloto2" class="form-control" placeholder="Numero" value="033">
+               </div>
+            </div>           
+            <div class="form-group row">
+               <div class="col">
+                  <label for="nomePiloto3" >Piloto 3</label>
+                  <span> <img src="images/C3.png" > </span>
+                  <input type="text" id="nomePiloto3" class="form-control" placeholder="Nome" value="K.RAIKKONEN">
+               </div>
+               <div class="col">
+                  <label for="numeroPiloto3" >Código Piloto 3</label>
+                  <input type="text" id="numeroPiloto3" class="form-control" placeholder="Numero" value="002">
+               </div>
+            </div>
+            <div class="form-group row">
+               <div class="col">
+                  <label for="nomePiloto4" >Piloto 4</label>
+                  <span> <img src="images/C4.png" > </span>
+                  <input type="text" id="nomePiloto4" class="form-control" placeholder="Nome" value="M.WEBBER">
+               </div>
+               <div class="col">
+                  <label for="numeroPiloto4" >Código Piloto 4</label>
+                  <input type="text" id="numeroPiloto4" class="form-control" placeholder="Numero" value="023">
+               </div>
+            </div>
+            <div class="form-group row">
+               <div class="col">
+                  <label for="nomePiloto5" >Piloto 5</label>
+                  <span> <img src="images/C5.png" > </span>
+                  <input type="text" id="nomePiloto5" class="form-control" placeholder="Nome" value="F.ALONSO">
+               </div>
+               <div class="col">
+                  <label for="numeroPiloto5" >Código Piloto 5</label>
+                  <input type="text" id="numeroPiloto5" class="form-control" placeholder="Numero" value="015">
+               </div>
+            </div>
+            
+         </form>
+            
+      </div> 
+      
+      <div id="inicio-corrida" style="display: none;">
+         <div class="form-group row">
+             <b>Inicio da Corrida! Basta ficar clicando no botão Push...</b>
+         </div>
+         
+         <div class="pista">
+             <div class="carro" id="carro1"></div>
+             <div class="carro" id="carro2"></div>
+             <div class="carro" id="carro3"></div>
+             <div class="carro" id="carro4"></div>
+             <div class="carro" id="carro5"></div>
+         </div>
+         
+         <br />
+         
+         <div class="form-group row">
+            <div style="margin-left: 12px;"> <button type="button" class="btn btn-success" onclick="push();">Push</button>  </div>
+            
+            <div style="margin-left: 30px;"> <button type="button" class="btn btn-danger" onclick="reset();">Reset</button> </div>
+         </div>
+         
+      </div> 
+      
+      <div id="historico-corrida" style="display: none;margin-top: -20px;">
+         <b>Dados da Corrida</b>
+         <br />
+         
+         <table class="table table-sm">
+            <thead>
+               <tr>
+                  <th scope="col">Hora</th>
+                  <th scope="col">Piloto</th>
+                  <th scope="col">Nº Volta</th>
+                  <th scope="col">Tempo Volta</th>
+                  <th scope="col">Velocidade média da volta</th>
+               </tr>
+            </thead>
+            <tbody style="font-weight: normal;font-size: 14px;">
+               <!-- Linha da Historico de Voltas -->
+               <tr id="linha1"  style="display: none;">  <td><span id="hora1"></span> </td> <td><span id="piloto1"></span></td> <td><span  id="volta1"></span> </td> <td><span id="tempo1"> </span></td> <td><span id="media1"> </span></td>  </tr>
+               <tr id="linha2"  style="display: none;">  <td><span id="hora2"></span> </td> <td><span id="piloto2"></span></td> <td><span  id="volta2"></span> </td> <td><span id="tempo2"> </span></td> <td><span id="media2"> </span></td>  </tr>
+               <tr id="linha3"  style="display: none;">  <td><span id="hora3"></span> </td> <td><span id="piloto3"></span></td> <td><span  id="volta3"></span> </td> <td><span id="tempo3"> </span></td> <td><span id="media3"> </span></td>  </tr>
+               <tr id="linha4"  style="display: none;">  <td><span id="hora4"></span> </td> <td><span id="piloto4"></span></td> <td><span  id="volta4"></span> </td> <td><span id="tempo4"> </span></td> <td><span id="media4"> </span></td>  </tr>
+               <tr id="linha5"  style="display: none;">  <td><span id="hora5"></span> </td> <td><span id="piloto5"></span></td> <td><span  id="volta5"></span> </td> <td><span id="tempo5"> </span></td> <td><span id="media5"> </span></td>  </tr>
+               <tr id="linha6"  style="display: none;">  <td><span id="hora6"></span> </td> <td><span id="piloto6"></span></td> <td><span  id="volta6"></span> </td> <td><span id="tempo6"> </span></td> <td><span id="media6"> </span></td>  </tr>
+               <tr id="linha7"  style="display: none;">  <td><span id="hora7"></span> </td> <td><span id="piloto7"></span></td> <td><span  id="volta7"></span> </td> <td><span id="tempo7"> </span></td> <td><span id="media7"> </span></td>  </tr>
+               <tr id="linha8"  style="display: none;">  <td><span id="hora8"></span> </td> <td><span id="piloto8"></span></td> <td><span  id="volta8"></span> </td> <td><span id="tempo8"> </span></td> <td><span id="media8"> </span></td>  </tr>
+               <tr id="linha9"  style="display: none;">  <td><span id="hora9"></span> </td> <td><span id="piloto9"></span></td> <td><span  id="volta9"></span> </td> <td><span id="tempo9"> </span></td> <td><span id="media9"> </span></td>  </tr>
+               <tr id="linha10" style="display: none;">  <td><span id="hora10"></span></td> <td><span id="piloto10"></span></td> <td><span id="volta10"></span></td> <td><span id="tempo10"></span></td> <td><span id="media10"></span></td>  </tr>
+               <tr id="linha11" style="display: none;">  <td><span id="hora11"></span></td> <td><span id="piloto11"></span></td> <td><span id="volta11"></span></td> <td><span id="tempo11"></span></td> <td><span id="media11"></span></td>  </tr>
+               <tr id="linha12" style="display: none;">  <td><span id="hora12"></span></td> <td><span id="piloto12"></span></td> <td><span id="volta12"></span></td> <td><span id="tempo12"></span></td> <td><span id="media12"></span></td>  </tr>
+               <tr id="linha13" style="display: none;">  <td><span id="hora13"></span></td> <td><span id="piloto13"></span></td> <td><span id="volta13"></span></td> <td><span id="tempo13"></span></td> <td><span id="media13"></span></td>  </tr>
+               <tr id="linha14" style="display: none;">  <td><span id="hora14"></span></td> <td><span id="piloto14"></span></td> <td><span id="volta14"></span></td> <td><span id="tempo14"></span></td> <td><span id="media14"></span></td>  </tr>
+               <tr id="linha15" style="display: none;">  <td><span id="hora15"></span></td> <td><span id="piloto15"></span></td> <td><span id="volta15"></span></td> <td><span id="tempo15"></span></td> <td><span id="media15"></span></td>  </tr>
+               <tr id="linha16" style="display: none;">  <td><span id="hora16"></span></td> <td><span id="piloto16"></span></td> <td><span id="volta16"></span></td> <td><span id="tempo16"></span></td> <td><span id="media16"></span></td>  </tr>
+               <tr id="linha17" style="display: none;">  <td><span id="hora17"></span></td> <td><span id="piloto17"></span></td> <td><span id="volta17"></span></td> <td><span id="tempo17"></span></td> <td><span id="media17"></span></td>  </tr>
+               <tr id="linha18" style="display: none;">  <td><span id="hora18"></span></td> <td><span id="piloto18"></span></td> <td><span id="volta18"></span></td> <td><span id="tempo18"></span></td> <td><span id="media18"></span></td>  </tr>
+               <tr id="linha19" style="display: none;">  <td><span id="hora19"></span></td> <td><span id="piloto19"></span></td> <td><span id="volta19"></span></td> <td><span id="tempo19"></span></td> <td><span id="media19"></span></td>  </tr>
+               <tr id="linha20" style="display: none;">  <td><span id="hora20"></span></td> <td><span id="piloto20"></span></td> <td><span id="volta20"></span></td> <td><span id="tempo20"></span></td> <td><span id="media20"></span></td>  </tr>
+               <tr id="linha21" style="display: none;">  <td><span id="hora21"></span></td> <td><span id="piloto21"></span></td> <td><span id="volta21"></span></td> <td><span id="tempo21"></span></td> <td><span id="media21"></span></td>  </tr>
+            </tbody>
+         </table>
+         
+      </div>
+      
+      
+      <div id="classificacao-corrida" style="display: none;">
+         <div class="form-group row">
+             <b> Classificação e Estatística de cada piloto durante toda a corrida...</b>
+         </div>
+         <br />
+         
+         <div class="form-group row">
+            <div style="background-color: darkgrey;margin-left: 10px;">
+               <span style="font-weight: 500;color: red;"> Classificação Geral </span> 
+               <table class="table table-sm" style="width: 770px;">
+                  <thead>
+                     <tr>
+                        <th scope="col" style="width: 70px;">Posição</th>
+                        <th scope="col" style="width: 300px;">Piloto</th>
+                        <th scope="col" style="width: 200px;">Tempo Geral</th>
+                        <th scope="col" style="width: 200px;">GAPS (Distanciamento) </th>
+                     </tr>
+                  </thead>
+                  <tbody style="font-weight: normal;font-size: 14px;">
+                     <tr> <td><span><b>1</b></span> </td> <td><span id="nomeDoPilotoVeloc1"> 038 - F.MASSA </span> &nbsp;&nbsp;      <img id="imgCarro1" src="images/C1.png" /> </span></td>         <td><span id="idTempoGeral1"> </span></td> <td><span id="idGAP1"> </span></td>  </tr>
+                     <tr> <td><span><b>2</b></span> </td> <td><span id="nomeDoPilotoVeloc2"> 033 - R.BARRICHELLO </span> &nbsp;&nbsp;<img id="imgCarro2" src="images/C2.png" /> </span></td>  <td><span id="idTempoGeral2"> </span></td> <td><span id="idGAP2"> </span></td>  </tr>
+                     <tr> <td><span><b>3</b></span> </td> <td><span id="nomeDoPilotoVeloc3"> 002 - K.RAIKKONEN </span> &nbsp;&nbsp;  <img id="imgCarro3" src="images/C3.png" /> </span></td>    <td><span id="idTempoGeral3"> </span></td> <td><span id="idGAP3"> </span></td>  </tr>
+                     <tr> <td><span><b>4</b></span> </td> <td><span id="nomeDoPilotoVeloc4"> 023 - M.WEBBER </span> &nbsp;&nbsp;     <img id="imgCarro4" src="images/C4.png" /> </span></td>       <td><span id="idTempoGeral4"> </span></td> <td><span id="idGAP4"> </span></td>  </tr>
+                     <tr> <td><span><b>5</b></span> </td> <td><span id="nomeDoPilotoVeloc5"> 015 - F.ALONSO </span> &nbsp;&nbsp;     <img id="imgCarro5" src="images/C5.png" /> </span></td>       <td><span id="idTempoGeral5"> </span></td> <td><span id="idGAP5"> </span></td>  </tr>
+                  </tbody>
+               </table>
+            </div>
+         
+         </div>
+         
+         <br />
+         <div class="form-group row">
+            <div style="background-color: aliceblue; margin-left: 10px;">
+               <span style="font-weight: 500;color: red;"> Tabela da melhor volta de cada piloto </span> 
+               <table class="table table-sm" style="width: 450px;">
+                  <thead>
+                     <tr>
+                        <th scope="col" style="width: 70px;">Ordem</th>
+                        <th scope="col" style="width: 260px;">Piloto</th>
+                        <th scope="col" style="width: 120px;">Tempo Volta</th>
+                     </tr>
+                  </thead>
+                  <tbody style="font-weight: normal;font-size: 14px;">
+                     <tr> <td><span><b>1</b></span> </td> <td><span id="nomeDoPiloto1"> </span></td> <td><span id="tempoDeVolta1"> </span></td>  </tr>
+                     <tr> <td><span><b>2</b></span> </td> <td><span id="nomeDoPiloto2"> </span></td> <td><span id="tempoDeVolta2"> </span></td>  </tr>
+                     <tr> <td><span><b>3</b></span> </td> <td><span id="nomeDoPiloto3"> </span></td> <td><span id="tempoDeVolta3"> </span></td>  </tr>
+                     <tr> <td><span><b>4</b></span> </td> <td><span id="nomeDoPiloto4"> </span></td> <td><span id="tempoDeVolta4"> </span></td>  </tr>
+                     <tr> <td><span><b>5</b></span> </td> <td><span id="nomeDoPiloto5"> </span></td> <td><span id="tempoDeVolta5"> </span></td>  </tr>
+                  </tbody>
+               </table>
+            </div>
+            
+            <div style="background-color: aliceblue;margin-left: 50px;">
+               <span style="font-weight: 500;color: red;"> Tabela da  velocidade média de cada piloto durante toda corrida </span> 
+               <table class="table table-sm" style="width: 450px;">
+                  <thead>
+                     <tr>
+                        <th scope="col" style="width: 285px;">Piloto</th>
+                        <th scope="col" style="width: 165px;">Velocidade Média</th>
+                     </tr>
+                  </thead>
+                  <tbody style="font-weight: normal;font-size: 14px;">
+                     <tr> <td><span id="nomeDoPilotoVeloc1"> 038 - F.MASSA </span></td> <td><span id="idMediaVeloc1"> </span></td>  </tr>
+                     <tr> <td><span id="nomeDoPilotoVeloc2"> 033 - R.BARRICHELLO </span></td> <td><span id="idMediaVeloc2"> </span></td>  </tr>
+                     <tr> <td><span id="nomeDoPilotoVeloc3"> 002 - K.RAIKKONEN </span></td> <td><span id="idMediaVeloc3"> </span></td>  </tr>
+                     <tr> <td><span id="nomeDoPilotoVeloc4"> 023 - M.WEBBER </span></td> <td><span id="idMediaVeloc4"> </span></td>  </tr>
+                     <tr> <td><span id="nomeDoPilotoVeloc5"> 015 - F.ALONSO </span></td> <td><span id="idMediaVeloc5"> </span></td>  </tr>
+                  </tbody>
+               </table>
+            </div>
+            
+         </div>
+         
+      </div>
+      
+      
+      
+      <div id="titulos-pilotos" style="display: none;">
+         <div class="form-group row" style="margin-left: -6px;">
+             <b> Lista dos campeões da Corrida Maluca Gympass </b>
+         </div>
+         <br />
+         
+         <div class="form-group row">
+            <div style="margin-left: 10px;">
+               <span style="font-weight: 500;color: red;"> Classificação dos Campões </span> 
+               <table class="table table-sm">
+                  <thead>
+                     <tr>
+                        <th scope="col" style="width: 70px;">Posição</th>
+                        <th scope="col" style="width: 300px;">Piloto</th>
+                        <th scope="col" style="width: 300px;">Medalha de Ouro</th>
+                        <th scope="col" style="width: 300px;">Medalha de Prata</th>
+                        <th scope="col" style="width: 300px;">Medalha de Bronze</th>
+                     </tr>
+                  </thead>
+                  <tbody style="font-weight: normal;font-size: 14px;">
+                     <tr> <td><span><b>1</b></span> </td> <td><span id="nomeDoCampeaoPiloto1"> 038 - F.MASSA </span></td>       <td><span id="idOuro1"> </span></td>  <td><span id="idPrata1"> </span></td>  <td><span id="idBronze1"> </span></td> </tr>
+                     <tr> <td><span><b>2</b></span> </td> <td><span id="nomeDoCampeaoPiloto2"> 033 - R.BARRICHELLO </span></td> <td><span id="idOuro2"> </span></td>  <td><span id="idPrata2"> </span></td>  <td><span id="idBronze2"> </span></td> </tr>
+                     <tr> <td><span><b>3</b></span> </td> <td><span id="nomeDoCampeaoPiloto3"> 002 - K.RAIKKONEN </span></td>   <td><span id="idOuro3"> </span></td>  <td><span id="idPrata3"> </span></td>  <td><span id="idBronze3"> </span></td> </tr>
+                     <tr> <td><span><b>4</b></span> </td> <td><span id="nomeDoCampeaoPiloto4"> 023 - M.WEBBER </span></td>      <td><span id="idOuro4"> </span></td>  <td><span id="idPrata4"> </span></td>  <td><span id="idBronze4"> </span></td> </tr>
+                     <tr> <td><span><b>5</b></span> </td> <td><span id="nomeDoCampeaoPiloto5"> 015 - F.ALONSO </span></td>      <td><span id="idOuro5"> </span></td>  <td><span id="idPrata5"> </span></td>  <td><span id="idBronze5"> </span></td> </tr>
+                  </tbody>
+               </table>
+            </div>
+         
+         </div>
+      
+      </div>
+      
+            
+   
+   </div>
+
+</body>
+
+</html>

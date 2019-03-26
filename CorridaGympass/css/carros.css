@@ -1,0 +1,49 @@
+.pista {
+    height: 240px;
+    width: 849px;
+    background-image: url("../images/pista2.png");
+    position: relative;
+}
+
+.carro {
+    position: absolute;
+    width: 40px;
+    height: 20px;
+    background-color: transparent; 
+    transform: translateX(-2000px);
+    transition: transform 1s;
+}
+
+#carro1 {
+    right: 772px;
+    top: 42px;
+    background-image: url("../images/C1.png");
+}
+
+#carro2 {
+    right: 772px;
+    top: 76px;
+    background-image: url("../images/C2.png");
+}
+
+#carro3 {
+    right: 772px;
+    top: 110px;
+    background-image: url("../images/C3.png");
+}
+
+#carro4 {
+    right: 772px;
+    top: 144px;
+    background-image: url("../images/C4.png");
+}
+
+#carro5 {
+    right: 772px;
+    top: 178px;
+    background-image: url("../images/C5.png");
+}
+
+.largada .carro {
+    transform: translateX(0);
+}
